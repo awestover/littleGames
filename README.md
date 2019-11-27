@@ -6,6 +6,7 @@ etc.
 ## projects: 
 
   - [warcross](warcross)
+  - [revenants](revenants)
   - [snalek](snalek)
   - [revenants](revenants)
   - [thesea](thesea)
