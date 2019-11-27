@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- makes it so the user cannot zoom in on accident -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Imporve later, change canvas -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+  	<title>Snalek</title>
+
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Import p5 libraries -->
+  	<script src="libraries/p5/p5.js" type="text/javascript"></script>
+    <script src="libraries/p5/addons/p5.dom.js" type="text/javascript"></script>
+    <script src="libraries/p5/addons/p5.sound.js" type="text/javascript"></script>
+
+    <!-- Import my functions -->
+    <script src="Snake.js" type="text/javascript"></script>
+    <script src="Food.js" type="text/javascript"></script>
+
+    <script src="sketch.js" type="text/javascript"></script>
+
+  </head>
+
+  <body>
+
+    <div id="everything">
+
+      <div id="annoyingIntro">
+        <h1>The snake game</h1>
+
+        <label>Would you like sound</label>
+        <input type="text" id="sound" />
+        <button onclick="checkSound();">Done</button>
+      </div>
+
+      <div id="stuff">
+        <button onclick="$('#stuff').remove();">Eliminate annoyances</button>
+
+        <div id="control">
+          <!--
+          <div id="shootDiv">
+            <button id ="shoot" onclick="shootBull();">shoot</button>
+          </div>-->
+
+          <div id="arrows">
+          	<button id ="up" onclick="handleKey('w');">&uarr;</button>
+          	<br><button id ="left" onclick="handleKey('a');">&larr;</button>
+          	<button id ="down" onclick="handleKey('s');">&darr;</button>
+          	<button id ="right" onclick="handleKey('d');">&rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function checkSound()
+      {
+        if (document.getElementById("sound").value == "o yea")
+        {
+          song.loop();
+        }
+        $('#annoyingIntro').remove();
+      }
+    </script>
+
+  </body>
+</html>

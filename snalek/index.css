@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+}
+
+#everything {
+  float: right;
+}
+
+button{
+  height:200%;
+  width:auto;
+}
