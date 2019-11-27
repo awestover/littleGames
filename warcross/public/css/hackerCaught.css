@@ -1,0 +1,22 @@
+
+*{
+	background-color: black;
+}
+
+.title{
+	text-align: center;
+	font-size: 40px;
+	background: linear-gradient(to right, pink, white, cyan, yellow);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 10px;
+}
+
+.warning{
+	font-size: 20px;
+	color: red;
+	margin-top: 40px;
+	font-family: 'Roboto Mono', monospace;
+}
+

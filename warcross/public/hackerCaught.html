@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Hacker caught</title>
+		<link rel="stylesheet" href="css/hackerCaught.css" type="text/css">
+		<script src="node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<h1 class="title">Hacker caught</h1>
+		<div class="warning" id="main-stuff">
+			<h1>I have pretty good reasons to suspect that you are trying something sketchy like modifying the url that we gave you.</h1>
+			<h1>This is no good</h1>
+			<h1>If you are gonna try to hack this game at least do it without getting caught and STOPPED ;) </h1>
+			<h1>If you weren't cheating sorry!!! please tell us about your experience.</h1>
+			<h1>I'm gonna redirect you to the titlepage in a couple secs, so please do better next time (yes this is an intentionally ambiguous request)</h1>
+			<h1>Use the link or press any key to go there faster.</h1>
+			<a href="titlepage.html">titlepage</a>
+		</div>
+		<script charset="utf-8">
+			setTimeout(function(){
+				window.location.href="titlepage.html";
+			}, 5000);
+
+			$(document).on("keypress",function(e){
+				window.location.href="titlepage.html";
+			});
+		</script>
+	</body>
+
+</html>

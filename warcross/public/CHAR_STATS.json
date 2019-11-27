@@ -1,0 +1,38 @@
+{
+	"architect": {
+		"pos": [2048, 0], 
+		"speed": 0.2, 
+		"health": 1000, 
+		"attackModifier": 1, 
+		"artifactCooldown": 20,
+		"isSpectator": true, 
+		"characterClass": "architect"
+	},
+	"shield": {
+		"pos": [2048, 0], 
+		"speed": 0.2, 
+		"health": 1500, 
+		"attackModifier": 1, 
+		"artifactCooldown": 30,
+		"isSpectator": true, 
+		"characterClass": "shield"
+	},
+	"fighter": {
+		"pos": [2048, 0], 
+		"speed": 0.2, 
+		"health": 1000, 
+		"attackModifier": 1.5, 
+		"artifactCooldown": 30,
+		"isSpectator": true, 
+		"characterClass": "fighter"
+	},
+	"thief": {
+		"pos": [2048, 0], 
+		"speed": 0.3, 
+		"health": 1000, 
+		"attackModifier": 1, 
+		"artifactCooldown": 30,
+		"isSpectator": true, 
+		"characterClass": "thief"
+	}
+}
