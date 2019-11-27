@@ -1,0 +1,19 @@
+{
+  "name": "thevoid",
+  "version": "1.0.0",
+  "description": "This is a game, players have resources and try to destroy the other player",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "Alek Westover",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1",
+    "p5": "^0.7.3"
+  }
+}
