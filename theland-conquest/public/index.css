@@ -1,0 +1,62 @@
+body {
+	font-size: small;
+  	word-wrap: break-word;
+}
+
+div#main {
+	background-color: rgb(0,200,0);
+}
+
+html {
+	background-color: rgb(0,255,0);
+}
+
+button {
+	font-size: medium;
+}
+
+.container {
+	margin: 0%;
+	padding: 1%;
+}
+
+h2, h3, button
+{
+    margin-left: 3%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+#resources {
+  background-color: rgb(255, 0, 0);
+}
+
+#animals {
+  background-color: rgb(0, 0, 255);
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}

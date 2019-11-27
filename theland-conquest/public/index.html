@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>theland-conquest</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+
+		<!-- main style -->
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="stylesheet" type="text/css" href="libs/bootstrap-4.1.3-dist/css/bootstrap.min.css">
+
+		<!-- usefull libraries -->
+		<script src="libs/p5.min.js"></script>
+		<script src="libs/jquery-3.3.1.min.js"></script>
+		<script src="libs/notify.min.js"></script>
+		<script src="libs/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+
+		<!-- my libraries -->
+		<script src="traits.js"></script>
+		<script src="variables.js"></script>
+		<script src="functions.js"></script>
+		<script src="updateText.js"></script>
+		<script src="Animals.js"></script>
+	</head>
+
+	<body>
+		<!-- main program -->
+		<script src="sketch.js"></script>
+
+		<!-- the site -->
+		<div class="noselect" id="main">
+			<h1>theland-conquest</h1>
+			<button onclick="cheat();">cheat (for developers only)</button>
+			<br><br>
+
+			<div id="animals" class="column">
+				<div id="animals-sub" class="container">
+					<h1>Animals</h1>
+					<script>
+						let tmp='';
+						for(let idx in stats) {
+							let animal = stats[idx].name;
+							tmp += '<h2 id="' + animal + 'Ct"></h2>';
+							tmp += '<button id="buy' + firstUpper(animal) + '" onclick="allAnimals[' + idx + '].buyFirst()">Buy '+ firstUpper(animal) +'</button>';
+							tmp += '<img src="imgs/' + animal + '.png"></img>';
+						}
+						$("#animals-sub").append(tmp);
+					</script>
+					<div id="canvas"></div>
+				</div>
+			</div>
+
+			<div id="resources" class="column">
+				<h1>Resources</h1>
+
+				<div class="container">
+					<h1>Research</h1>
+				</div>
+
+				<div id="finalDecision" class="container">
+					<h1>fate of theland</h1>
+					<button id="saveTheLand" onclick="saveTheLand();">Save theland</button>
+					<button id="destroyTheLand" onclick="destroyTheLand();">Destroy theland</button>
+				</div>
+
+				<div id="wisdom" class="container">
+					<h1 id="wisdomCt"></h1>
+					<button id="addWisdom" onclick="addWisdom();">Collect wisdom</button>
+				</div>
+
+				<div class="container">
+					<h1 id="stormlightCt"></h1>
+					<button id="addStormlight" onclick="addStormlight();">Collect stormlight</button>
+				</div>
+
+				<div class="container">
+					<h2 id="num_food"></h2>
+					<button onclick="orderPizza();">order pizza</button>
+					<h2 id="recurring_pizza"></h2>
+					<div id="pizza_buyer_div">
+						<button onclick="orderBuyer();">hire pizza buyer</button>
+						<h2 id="pizza_buyer"></h2>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+
+</html>
