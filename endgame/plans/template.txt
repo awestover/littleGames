@@ -1,0 +1,3 @@
+start.py (choose character, username)
+game.py (run the main game)
+fingers.py (get finger data)

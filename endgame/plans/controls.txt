@@ -1,0 +1,112 @@
+
+STAGE I
+
+Species: 
+	-Faeries: Illyrians
+		Siphon power beams
+		Siphon shields
+			Daemati: control other troops or kill them (controlling: less. killing: more)
+			Shadowsinger: Stealth unit and can detect other stealth units
+			Shapeshifter: Increase in stats
+	
+	-Buggers
+		Goo spray
+		Lesser buggers as meat shield (dust animation)
+			Reproduce: Multiplies in numbers
+			Parasite: Spreadable disease that gradually infects and kills enemy troops on contact (parasites move faster than other troops but have low health)
+			Mutate: Increase in stats
+
+	-Humans: Jaegars
+		Gunfire
+		Fortified metal
+			MD: Chain reaction destroyer
+			Nukes: Destroy ships in area and leave radiation that causes damage
+			Upgrades: Increase in stats
+
+
+CONTROLS: 
+	Left Palm
+		|_1 finger: *Move into hand-drawn formation mode
+		|_2 fingers: *Upgrades
+			|_1 finger: *Upgrade 1
+			|_2 fingers: *Upgrades 2
+	Only Left palm
+		|_Attack (Troops flip to front and start shooting)
+	Only Left back
+		|_Defend (Troops flip to back and stop shooting)
+
+	Right Palm: 
+		|_1 finger: Select troops/*Draw troop formation
+		|_2 fingers: Movement/Speed (WASD)
+	Swipe Right Palm
+		|_Unselect/Exit (Will keep on going at current speed when unselected)
+
+
+===============================================================
+PROGRAMMING
+	-Select troops
+		First, unselect everything
+		While selecting, selected areas will have a transparent layer of blue
+		When no fingers detected, selected ships will turn red
+		
+		/////
+			https://stackoverflow.com/a/48155313
+			If finger count == 1
+				-Enter selection mode
+				-Unselect everything
+				-Set coordinates of one corner to that finger
+				-Keep track of following finger coordinates, send data over and check if troops in range. If yes, highlight troops
+			elif finger count == 0
+				-Exit WASD mode
+				-Highligted troops turn red, end of selection mode
+		/////
+	-Movement/Speed
+		Will go in direction pointed, speed determined by how far pointed
+		On unselect will keep on going at current speed and direction
+
+		/////
+			elif finger count == 2
+				-Enter WASD mode
+				-Set start coordinates to the initial start point
+				-Keep track of following finger coordinates, calculate difference and range of speed difference. 
+				-Send over speed difference. 
+		/////
+===============================================================
+	
+
+
+NOTE: 
+	Ships that crash into each other will both be eliminated
+	Ships take different rates of damage depending on attack or defense
+	Ships have HP and Speed
+
+COLORS: 
+	Bright Green right hand gloves
+	Bright Red left hand gloves
+	Blue finger dots
+	?? Back of hand
+	?? Palm
+
+	?? Knuckles ??
+
+EASTER EGG: 
+	When you do the Doctor-Strange-open-portal thingy, a portal to hell opens and eats your enemies
+
+
+
+
+
+
+STAGE II
+	-Wait time to coordinate ship formations and speed
+	-Terrain obstacles
+
+	-Multiplayer
+	-Fuel
+	-More weapons and ship types
+
+STAGE III
+	-Muthafuckin VIRTUAL REALITY
+
+
+

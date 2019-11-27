@@ -1,0 +1,21 @@
+go to floobits website
+
+infinite free tiral for public repos
+
+sign up with github account
+
+download tool
+
+atom:
+
+apm install floobits
+
+
+conrol shift p
+
+create or join workspace
+
+get a nice directory for it
+
+
+
