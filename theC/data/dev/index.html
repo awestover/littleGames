@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>picture stuff</title>
+</head>
+<body onkeypress="updateMapKey()">
+	<script src="data.js"></script>
+	<canvas id="cnv" width="2048" height="2048" onclick="updateMap()"></canvas>
+	<script>
+		var c = document.getElementById("cnv");
+		var ctx = c.getContext("2d");
+
+		var dataToColor = {
+			"w": "#4286f4",
+			"f": "#e25d0f",
+			"g": "#13d657",
+			"s": "#776852"
+		};
+
+		var N = 64;
+		var width = 32;
+		function drawMap() {	
+			for (var i = 0; i < data.length; i++) {
+				for (var j = 0; j < data[i].length; j++) {
+					ctx.fillStyle = dataToColor[data[i][j]];
+					ctx.fillRect(width*j, width*i, width, width);
+				}
+			}	
+		}
+
+	
+		function textifyMapData(mapArr){
+				let txt = "";
+				for(let i = 0; i < N; i++){
+					for(let j = 0; j < N; j++){
+						txt += mapArr[i][j]
+						if(j == N-1)
+							txt += "<br>";
+						else
+							txt += " ";
+					}
+					if (i != N-1)
+						txt += "<br>";
+				}
+				return txt;
+		}
+
+		function updateMap() {
+			let dx = Math.floor(event.clientX/width);
+			let dy = Math.floor(event.clientY/width);
+			var tileType = document.getElementById("tileType").value;
+			if ((dx >=0) && (dx < N) && (dy >= 0) && (dy < N)){
+				data[dy][dx] = tileType;
+				drawMap();
+				document.getElementById("result").innerHTML = textifyMapData(data);//JSON.stringify(data);	
+			}
+		}
+
+		function updateMapKey() {
+			let keys = "wfgs";
+			for (let i = 0; i < keys.length; i++){
+				if(event.key == keys[i]){
+					document.getElementById("tileType").value = keys[i];
+				}
+			}
+		}
+
+		drawMap();
+
+		
+
+	</script>
+
+	<select id="tileType">
+	  <option value="f">Fire</option>
+	  <option value="w">Water</option>
+	  <option value="g">Grass</option>
+	  <option value="s">Sand</option>
+	</select>
+	<br><br>
+
+	<p id="result"></p>
+</body>
+</html>
