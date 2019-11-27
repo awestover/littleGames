@@ -1,0 +1,14 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "game",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alek",
+  "license": "ISC",
+  "dependencies": {
+    "p5": "^0.9.0"
+  }
+}
