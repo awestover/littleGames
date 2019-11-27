@@ -1,41 +1,46 @@
+# Warcross
+
+Hackathon project. It is a video game based lightly on some battle scenes from "warcross" by Marie Lu.
 
 # ideas
 
-  multiplayer 
-    1v1 first 
-    2v2 option * regeneration both
+  - multiplayer 
+    * 1v1 first 
+    * 2v2 option 
+  - regeneration either way 
 
-  capture enemy flag
+  - capture enemy flag
     * kill whoever is holding the flag
 
 
-  tilemap background
+  - tilemap background
 
-  flask background music voting 
+  - flask background music voting 
 
-  fog / smoke animation
+  - fog / smoke animation
 
-  powerups
+  - powerups
     * temp burst of speed
     * sheilds
     * freeze 
     * lightning
     * teleporting
-  cheats
-  shoot bullets
+  - cheats
+  - shoot bullets
 
-  dynamite
+  - dynamite
 
-  oblstacles
+  - oblstacles
     * rocks
     * walls 
-      hard core stuff to block flashlights
+    * hard core stuff to block flashlights
 
-  arrows shoot out of wall
+  - arrows shoot out of wall
 
-  lots of computer agents 
-    quadtree collision
+  - lots of computer agents 
+    * quadtree collision detection
 
+  ```
   class User{
     constructor() {
       health
@@ -44,12 +49,13 @@
       lightRadius
     } 
   }
+  ```
 
-  gravity pulls
+  - gravity pulls
 
 
 
-summary of hard stuff:
+## summary of hard stuff:
   - ray hits line
   - AI
   - socketio
@@ -70,10 +76,10 @@ Kevin: front end web developer, artist
 
 
 # run the thing in a sketchy way -- low key not sketchy...
-  ssh -R 80:localhost:3000 ssh.localhost.run
+  `ssh -R 80:localhost:3000 ssh.localhost.run`
 
   OR, 
-  with npm install -g localtunnel 
+  with `npm install -g localtunnel`
   its something like
-  lt --port 3000
+  `lt --port 3000`
    
